@@ -48,7 +48,7 @@
         font: 12px/20px Georgia, "Times New Roman", Times, serif;
         padding-top: 25px;
         text-align: center;
-        width:500px;
+        width:530px;
         margin: 0 auto;
      }
 
@@ -132,7 +132,7 @@
      }
 
      #masthead a:link, #masthead a:visited {
-        color: #fff;
+        color: #000;
      }
 
      #siteDescription{
@@ -622,24 +622,23 @@
               </form>
 
             <div id="divLastfm">
-                Za sve drage korisnike last.fm mreže omogućili smo skroblovanje većine pesama. Potrebno je otići na play listu sa nazivom
-                top iz 2011, koja se nalazi na našem Zaokret nalogu. Koristeći chrome plugin moguće je sve pesme dokumentovati na profilu.
+               Za sve drage korisnike last.fm mreže omogućili smo skroblovanje većine pesama. Potrebno je otići na playlistu sa nazivom
+                <a href="http://www.last.fm/user/Zaokret/library/playlists/61hyo_top_iz_2011" target="_blank"><b>Top iz 2011</b></a>, koja se nalazi na našem Zaokret nalogu. Koristeći <a href="https://chrome.google.com/webstore/detail/bbncpldmanoknoahidbgmkgobgmhnafh" target="_blank"><b>chrome plugin</b></a> moguće je sve pesme dokumentovati na profilu.
 
               </div>
 
                <div id="divPrijava">
-                Pozdrav drugari, ponovo imamo želju da vidimo šta vam je obeležilo 2011. godinu. Ideja je da međusobno delimo deset pesama da bi bili sigurni da nam ništa ni ove godine muzički nije promaklo.
-                Izaberite top deset pesama koje su izašle ove godine. Listi dajte ime i spisak nam pošaljite na <b>topdeset@kisobran.org</b>.
+                Pozdrav drugari, ponovo imamo želju da vidimo šta vam je obeležilo 2011. godinu. Ideja je da međusobno delimo deset pesama da bismo bili sigurni da nam ništa ni ove godine muzički nije promaklo.
+                Izaberite top deset pesama koje su izašle ove godine. Listi dajte ime i spisak nam pošaljite na <a href="mailto:topdeset@kisobran.org" target="_blank"><b>topdeset@kisobran.org</b></a>.
                 Mi ćemo naći linkove, pripremiti post i što je pre moguće okačiti ga ovde.
                 Dalje hvalite vaš izbor preko twitter-a i facebook-a.
                 Pratite sajt, slušajte šta drugi kače, sigurno će biti puno lepih stvari.
-                Za sve nedoumice slobodno nas cimajte na topdeset@kisobran.org.
-
+                Za sve nedoumice slobodno nas cimajte na <a href="mailto:topdeset@kisobran.org" target="_blank">topdeset@kisobran.org</a>
               </div>
 
                <div id="divListenAll">
 
-              Poseti naš youtube kanal i preslušaj celu <u>   <a href="http://www.youtube.com/playlist?list=PLEC78D67C14A703BC">Kišobran top 2011 listu</a></u>
+              Poseti naš youtube kanal i preslušaj celu   <a href="http://www.youtube.com/playlist?list=PLEC78D67C14A703BC" target="_blank"><b>Kišobran top 2011 listu</b></a>
 
               </div>
 
@@ -841,7 +840,7 @@
      <footer id="sitemeta">
         <div class="clearfix">
            <div class="thefooter">
-              <p><a href="kisobran.og">kisobran.org</a></p>
+              <p><a href="http://www.kisobran.og">kisobran.org</a></p>
            </div>
         </div>
      </footer>
@@ -861,11 +860,19 @@
 
 
 
-        <script>
+        <script>$(function() {
+        $(".nevidljiv").each(function(index) {
+             $(this).replaceWith( "<input type='hidden' value='"+$(this).text()+"'/>" );
+        });
 
-    $(".playLink").click(function () {
 
-      var val = 'http://www.'+$(this).next().text()+'?version=3&amp;autoplay=1';
+        });
+
+        $(".playLink").click(function () {
+
+
+
+      var val = 'http://www.'+$(this).next().val()+'?version=3&amp;autoplay=1';
 
 
 
