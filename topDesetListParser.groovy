@@ -5,7 +5,7 @@
  * Time: 12.40
  * To change this template use File | Settings | File Templates.
  */
-def file = "liste/minka.txt"
+def file = "liste/indigo.txt"
 def playMarkup = " ▷ <a class='playLink' href='#'>play</a>";
 def spanStart = "<span>";
 def spanNevidljiv = "<span class='nevidljiv'>";
